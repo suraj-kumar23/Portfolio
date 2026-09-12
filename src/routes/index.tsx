@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import portrait from "@/assets/portrait.png";
-import resume from "@/assets/resume.pdf";
+
 import { DynamicNav } from "@/components/portfolio/DynamicNav";
 import { PortalHero } from "@/components/portfolio/PortalHero";
 import { ProjectCards } from "@/components/portfolio/ProjectCards";
@@ -105,10 +105,9 @@ function Portfolio() {
             >
               A Software Development Engineer with foundations in data
               structures, system design and problem solving, shipping
-              full-stack products with Java, Python, React, Node and Flask on
-              AWS and Azure. Whether it's a web app or a travel film, the
-              principle is the same: tell a compelling story with precision
-              and craft.
+              products with Java, Python, React, Node and Flask on AWS and
+              Azure. Whether it's a web app or a travel film, the principle is
+              the same: tell a compelling story with precision and craft.
             </p>
 
             <ul className="mt-16 grid gap-px border-t border-hairline sm:grid-cols-2 lg:grid-cols-4">
@@ -121,20 +120,16 @@ function Portfolio() {
                 >
                   <p className="label-xs text-amber">0{i + 1}</p>
 
-                  <p className="display mt-3 text-xl">
-                    {d.name}
-                  </p>
+                  <p className="display mt-3 text-xl">{d.name}</p>
 
-                  <p className="mt-2 text-[13px] text-ink-muted">
-                    {d.note}
-                  </p>
+                  <p className="mt-2 text-[13px] text-ink-muted">{d.note}</p>
                 </li>
               ))}
             </ul>
           </div>
 
           <img
-            src={portrait.url}
+            src={portrait}
             alt=""
             aria-hidden
             className="pointer-events-none absolute -right-24 top-1/3 hidden h-[420px] w-[420px] rounded-full object-cover opacity-15 lg:block"
@@ -154,9 +149,7 @@ function Portfolio() {
             className="flex flex-wrap items-end justify-between gap-8 pb-12 sm:pb-16"
           >
             <div>
-              <p className="label-xs text-teal">
-                Featured Work
-              </p>
+              <p className="label-xs text-teal">Featured Work</p>
 
               <h2 className="display mt-6 text-[clamp(34px,5vw,68px)] leading-[0.95]">
                 Projects<span className="text-amber">.</span>
@@ -220,14 +213,9 @@ function Portfolio() {
         </Section>
 
         {/* ── Cinematic Films ────────────────────────────── */}
-        <Section
-          id="films"
-          className="border-t border-hairline py-24 sm:py-32"
-        >
+        <Section id="films" className="border-t border-hairline py-24 sm:py-32">
           <div data-reveal className="pb-12 sm:pb-16">
-            <p className="label-xs text-teal">
-              Cinematic Reels
-            </p>
+            <p className="label-xs text-teal">Cinematic Reels</p>
 
             <h2 className="display mt-6 text-[clamp(34px,5vw,68px)] leading-[0.95]">
               Films<span className="text-amber">.</span>
@@ -298,9 +286,7 @@ function Portfolio() {
                       {inner}
                     </a>
                   ) : (
-                    <div className="flex items-center gap-4 py-6">
-                      {inner}
-                    </div>
+                    <div className="flex items-center gap-4 py-6">{inner}</div>
                   )}
                 </li>
               );
@@ -333,9 +319,7 @@ function Portfolio() {
           className="border-t border-hairline py-24 sm:py-32"
         >
           <div data-reveal>
-            <p className="label-xs text-teal">
-              Academic Journey
-            </p>
+            <p className="label-xs text-teal">Academic Journey</p>
 
             <h2 className="display mt-6 text-[clamp(30px,4.4vw,58px)] leading-none">
               Education<span className="text-amber">.</span>
@@ -356,9 +340,7 @@ function Portfolio() {
           className="border-t border-hairline py-24 sm:py-32"
         >
           <div data-reveal className="pb-12 sm:pb-16">
-            <p className="label-xs text-teal">
-              Credentials
-            </p>
+            <p className="label-xs text-teal">Credentials</p>
 
             <h2 className="display mt-6 text-[clamp(30px,4.4vw,58px)] leading-none">
               Certifications<span className="text-amber">.</span>
@@ -406,7 +388,7 @@ function Portfolio() {
                 </a>
 
                 <a
-                  href="/PortfolioNew/src/assets/resume.pdf"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Suraj-Kumar-Biswas-Resume.pdf"
@@ -418,9 +400,7 @@ function Portfolio() {
             </div>
 
             <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-hairline py-6">
-              <p className="label-xs text-ink-muted">
-                © 2026 Suraj Kumar Biswas
-              </p>
+              <p className="label-xs text-ink-muted"> © 2026 Suraj Kumar Biswas </p>
 
               <div className="flex flex-wrap gap-6">
                 {[
@@ -513,15 +493,9 @@ function EducationTimeline() {
 
               {/* Card */}
               <div
-                className={`ml-10 sm:w-[calc(50%-55px)] ${
-                  isLeft
-                    ? "sm:mr-auto"
-                    : "sm:ml-auto"
-                }`}
+                className={`ml-10 sm:w-[calc(50%-55px)] ${isLeft ? "sm:mr-auto" : "sm:ml-auto"}`}
               >
-                <div
-                  className="relative overflow-hidden rounded-2xl border border-hairline bg-ground-2 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition-all duration-700 ease-out [transform-style:preserve-3d] group-hover:-translate-y-3 group-hover:[transform:rotateX(3deg)_rotateY(-3deg)_translateZ(20px)] group-hover:border-amber/40 group-hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)] sm:p-8"
-                >
+                <div className="relative overflow-hidden rounded-2xl border border-hairline bg-ground-2 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition-all duration-700 ease-out [transform-style:preserve-3d] group-hover:-translate-y-3 group-hover:[transform:rotateX(3deg)_rotateY(-3deg)_translateZ(20px)] group-hover:border-amber/40 group-hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)] sm:p-8">
                   {/* 3D background glow */}
                   <div
                     className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-amber/10 blur-3xl transition-all duration-700 group-hover:scale-150 group-hover:bg-amber/15"
@@ -570,13 +544,9 @@ function EducationTimeline() {
                   {/* Result */}
                   <div className="relative z-10 mt-5 flex flex-wrap items-end justify-between gap-4">
                     <div>
-                      <p className="label-xs text-ink-muted">
-                        Result
-                      </p>
+                      <p className="label-xs text-ink-muted">Result</p>
 
-                      <p className="display mt-1 text-xl">
-                        {education.result}
-                      </p>
+                      <p className="display mt-1 text-xl">{education.result}</p>
                     </div>
 
                     <div className="flex h-10 w-10 items-center justify-center rounded-full border border-hairline transition-all duration-500 group-hover:rotate-45 group-hover:border-amber group-hover:bg-amber group-hover:text-ground">
