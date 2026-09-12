@@ -128,14 +128,9 @@ function Portfolio() {
             </ul>
           </div>
 
-          <img
-            src={portrait}
-            alt=""
+          <div
+            className="absolute -right-20 top-0 -z-10 h-[120%] w-[120%] bg-gradient-to-b from-transparent via-amber/10 to-transparent blur-[160px] sm:-right-40"
             aria-hidden
-            className="pointer-events-none absolute -right-24 top-1/3 hidden h-[420px] w-[420px] rounded-full object-cover opacity-15 lg:block"
-            style={{
-              transform: `translateY(${y * -0.04}px) rotate(${y * 0.012}deg)`,
-            }}
           />
         </section>
 
